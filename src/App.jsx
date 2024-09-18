@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext";
 import AuthPage from "./components/AuthPage";
 import PostPage from "./components/PostPage";
 import UserPage from "./components/UserPage";
+import { ExplorePage } from "./components/ExplorePage";
 
 const App = () => {
   // const { user } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="*" element={<AuthPage />} />
             <Route path="/post/:postId" element={<PostPage />} />
             <Route path="/user/:username" element={<UserPage />} />
+            <Route path="/explore" element={<ExplorePage />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

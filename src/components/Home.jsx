@@ -3,6 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Box, Container, Heading } from "@chakra-ui/react";
 import { Circles } from "react-loader-spinner";
 import Posts from "./Posts";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -35,6 +36,7 @@ const Home = () => {
       <Box position={"absolute"} width={"full"}>
         <Container maxW="620px">
           <Heading mb={4}>Welcome, {user.username}</Heading>
+          <Link to={"/explore"}>Explore Page</Link>
           <Posts />
           <button onClick={handleLogout}>Logout</button>
         </Container>
